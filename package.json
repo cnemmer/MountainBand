@@ -1,0 +1,25 @@
+{
+  "name": "MountainBand",
+  "version": "1.0.0",
+  "description": "E Commerce Site For Mountain Bands",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnemmer/MountainBand.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cnemmer/MountainBand/issues"
+  },
+  "homepage": "https://github.com/cnemmer/MountainBand#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.19"
+  }
+}
