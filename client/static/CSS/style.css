@@ -3,15 +3,13 @@
 	padding: 0
 }
 #wrapper {
-	width: 980px;
+	width: 100%;
 }
 #header {
-	width: 960px; 
+	width: 95%; 
 	margin: 0 auto;
 	padding: 10px; 
-	height: 100px; 
-	border: 1px solid black; /* for dev only */
-	/*background: */
+	height: 85px; 
 }
 .links {
 	text-decoration: none;
@@ -21,4 +19,7 @@
 	vertical-align: top;
 	float: right;
 	margin: 20px 10px; 
+}
+.carousel-inner {
+	width: 100%;
 }
