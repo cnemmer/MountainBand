@@ -8,6 +8,12 @@ var myApp = angular.module('myApp', ['ngRoute']);
 			.when('/login', {
 				templateUrl: 'partials/login.html'
 			})
+			.when('/checkout',{
+				templateUrl: 'partials/checkout.html'
+			})
+			.when('/payment', {
+				templateUrl: 'partials/payment.html'
+			})
 			.otherwise({
 				redirectTo: '/'
 			})
