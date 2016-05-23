@@ -14,6 +14,12 @@ var myApp = angular.module('myApp', ['ngRoute']);
 			.when('/payment', {
 				templateUrl: 'partials/payment.html'
 			})
+			.when('/addProduct', {
+				templateUrl: 'partials/addProduct.html'
+			})
+			.when('/products', {
+				templateUrl: 'partials/products.html'
+			})
 			.otherwise({
 				redirectTo: '/'
 			})
