@@ -5,6 +5,9 @@ var myApp = angular.module('myApp', ['ngRoute']);
 			.when('/', {
 				templateUrl: 'partials/mainview.html'
 			})
+			.when('/login', {
+				templateUrl: 'partials/login.html'
+			})
 			.otherwise({
 				redirectTo: '/'
 			})
