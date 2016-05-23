@@ -1,0 +1,12 @@
+<div ng-controller="MainviewController">
+    <form>
+      <fieldset>
+        <legend>New Product</legend>
+        <input type="text" ng-model="newProduct.name" placeholder="Name">
+        <input type="text" ng-model="newProduct.price" placeholder="Price">
+        <input type="url" ng-model="newProduct.IMG" placeholder="IMG ">
+        <textarea ng-model="newProduct.desc" rows="8" cols="40" placeholder="Description"></textarea>
+        <input type="submit" ng-click="addProduct()" value="Add Product">
+      </fieldset>
+    </form>
+</div>
