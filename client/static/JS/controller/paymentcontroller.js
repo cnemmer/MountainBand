@@ -1,0 +1,3 @@
+myApp.controller('PaymentController',  function(){
+	
+})
