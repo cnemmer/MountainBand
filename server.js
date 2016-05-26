@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/client'));
 require('./server/config/mongoose');
 
 //Routes
-//require('./server/config/routes')(app);
+require('./server/config/routes')(app);
 
 //Port Location
 app.listen(3500, function(){
