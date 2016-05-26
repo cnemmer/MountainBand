@@ -10,6 +10,9 @@
 			.when('/checkout', {
 				templateUrl: 'partials/checkout.html'
 			})
+			.when('/checkout/:id', {
+				templateUrl: 'partials/checkout.html'
+			})
 			.when('/payment', {
 				templateUrl: 'partials/payment.html'
 			})

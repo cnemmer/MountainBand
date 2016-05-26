@@ -16,11 +16,13 @@
   </div>
 </div>
 <div >
-
 <div ng-controller="ProductsController">
-  <div ng-repeat="prod in products ">
-      <img ng-src="{{ prod.image }}" alt="{{ prod.desc }}" width="200" height="200">
-      <h3>{{ prod.name }}</h3>
-      <h4>{{ prod.price | currency }}</h4>
+    <div ng-repeat="prod in products ">
+        <img ng-src="{{ prod.image }}" alt="{{ prod.desc }}" width="200" height="200">
+        <h3>{{ prod.name }}</h3>
+        <h4>{{ prod.price | currency }}</h4>
+      <button ng-click="createCust(prod._id)">Buy Me</button>
+    </div>
   </div>
+  <div >
 </div>
