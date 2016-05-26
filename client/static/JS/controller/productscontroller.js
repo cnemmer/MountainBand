@@ -1,4 +1,4 @@
-myApp.controller("ProductsController", function($scope, ProductsFactory, $location){
+myApp.controller("ProductsController", function($scope, ProductsFactory, $location, CheckoutFactory){
 
   // $scope.products = ProductsFactory.products;
   // console.log($scope.products);
@@ -7,7 +7,7 @@ myApp.controller("ProductsController", function($scope, ProductsFactory, $locati
       $scope.products = data;
     })
   }
-  getProds(); 
+  getProds();
 
   $scope.addProduct = function(){
     ProductsFactory.create($scope.newProduct, function(data){
@@ -16,6 +16,10 @@ myApp.controller("ProductsController", function($scope, ProductsFactory, $locati
       $location.path("/products");
     });
 
+  }
+
+  $scope.createCust = function(id){
+    $location.path("/checkout/" + id);
   }
 
 
