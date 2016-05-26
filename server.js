@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 //Static Folder
-app.use(express.static(__dirname + '/client'));
+app.use(express.static(__dirname + '/client/'));
 
 //Mongoose
 require('./server/config/mongoose');

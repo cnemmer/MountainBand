@@ -1,5 +1,0 @@
-myApp.controller('MainviewController', function(){
-
-	
-
-})
