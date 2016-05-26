@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 //Static Folder
-app.use(express.static(__dirname + '/client'));
+app.use(express.static(__dirname + '/client/'));
 
 //Mongoose
 require('./server/config/mongoose');
