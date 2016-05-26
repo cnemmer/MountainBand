@@ -5,6 +5,7 @@ var app = express();
 //Body Parser
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 //Static Folder
 app.use(express.static(__dirname + '/client'));
