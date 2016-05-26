@@ -19,6 +19,9 @@
 			.when('/products', {
 				templateUrl: 'partials/products.html'
 			})
+			.when('/storelocate', {
+				templateUrl: 'partials/storelocate.html'
+			})
 			.otherwise({
 				redirectTo: '/'
 			})

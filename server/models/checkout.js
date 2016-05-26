@@ -7,6 +7,7 @@ var CheckoutClientSchema = new mongoose.Schema({
 	streetAdd: String,
 	unitNum: Number,
 	city: String,
+	zipcode: Number,
 	state: String,
 	created_at: {type: Date, default: new Date}
 })
