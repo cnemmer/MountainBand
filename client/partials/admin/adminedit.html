@@ -1,0 +1,65 @@
+<div class="container">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+			<h1 class="this">	
+			<img class="adminimg" src="http://www.nevasport.com/imagenes/icono_monte.png"> Admin Dashboard
+			<img class="adminimg2" src="http://www.nevasport.com/imagenes/icono_monte.png">
+			</h1>
+	</nav>
+
+		<ol class="breadcrumb well adminpage">
+		  <li class="adminactive"><a href="#/adminproducts">EditProducts</a></li>
+		  <li><a href="#">Customers</a></li>
+		  <li><a href="#">Recent Orders</a></li>
+		  <li><a href="#">Manage Transactions</a></li>
+		   <li><a href="#/adminpage">Main</a></li>
+		</ol>
+
+	<div class="well" ng-controller="AdminProductController as APC" >
+		<table class="table table-bordered table-striped">
+			<tr>
+				<th>Product</th>
+				<th>Price</th>
+				<th>Images</th>
+				<th>Description</th>
+				<th>Date</th>
+				<th>Action</th>
+			</tr>
+			<tr ng-repeat="e in APC.edit">
+				<td>{{e.name}}</td>
+				<td>{{e.price}}</td>
+				<td ><img class="adminproductimage" src="{{e.img}}">
+					 <img class="adminproductimage" src="{{e.img1}}">
+					 <img class="adminproductimage" src="{{e.img2}}">
+					 <img class="adminproductimage" src="{{e.img3}}">
+				</td>
+				<td>
+					{{e.description}}
+				</td>
+				<td>
+					{{e.moment}}
+				</td>
+				<td>
+					<button class="btn btn-danger">Delete This Product</button>
+				</td>
+			</tr>
+		</table>
+
+		<div class="well">
+			<h3>Edit This Product</h3>
+			<form ng-repeat="e in APC.edit" ng-init="APC.updateP = e">
+				<h4>Name:</h4> <input class="form-control"  ng-model="APC.updateP.name">
+				<h4>Price:</h4><input class="form-control" ng-model="APC.updateP.price">
+				<h4>Image1:</h4><input class="form-control" ng-model="APC.updateP.img">
+				<h4>Image2:</h4><input class="form-control" ng-model="APC.updateP.img1">
+				<h4>Image3:</h4><input class="form-control" ng-model="APC.updateP.img2">
+				<h4>Image4:</h4><input class="form-control" ng-model="APC.updateP.img3">
+				<h4>Description:</h4><input class="form-control" ng-model="APC.updateP.description">
+				<h4>Date:</h4><input class="form-control" ng-model="APC.updateP.moment"><br>
+				<button class="btn btn-default" ng-click="APC.update(e._id, APC.updateP)">Update Product</button>
+			</form>
+		</div>
+
+	</div>
+	
+</div>
+	

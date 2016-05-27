@@ -25,5 +25,9 @@ module.exports = function(app){
 	app.get('/adminproducts', AdminProduct.index);
 
 	app.post('/adminproducts', AdminProduct.create);
+
+	app.get('/adminproducts/:id', AdminProduct.show);
+
+	app.put('/adminproducts/:id', AdminProduct.update);
 }
 

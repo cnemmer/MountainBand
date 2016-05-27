@@ -21,9 +21,9 @@
 				<input class="form-control" placeholder="Name" ng-model="APC.newProduct.name">
 				<input class="form-control" placeholder="Price" ng-model="APC.newProduct.price">
 				<input class="form-control" placeholder="Image URL (required)" ng-model="APC.newProduct.img">
-				<input class="form-control" placeholder="Image 2" ng-model="APC.newProduct.img2">
-				<input class="form-control" placeholder="Image 3" ng-model="APC.newProduct.img3">
-				<input class="form-control" placeholder="Image 4" ng-model="APC.newProduct.img4">
+				<input class="form-control" placeholder="Image 2" ng-model="APC.newProduct.img1">
+				<input class="form-control" placeholder="Image 3" ng-model="APC.newProduct.img2">
+				<input class="form-control" placeholder="Image 4" ng-model="APC.newProduct.img3">
 				<input class="form-control" placeholder="Description" ng-model="APC.newProduct.description">
 				<button class="btn btn-default" ng-click="APC.create(APC.newProduct)">Add Product</button>
 			</form>
@@ -36,12 +36,14 @@
 				<th>Price</th>
 				<th>Image</th>
 				<th>Date Added</th>
+				<th>Action</th>
 			</tr>
 			<tr ng-repeat="p in APC.products">
-				<td><a href="#/adminproduct/{{p._id}}">{{p.name}}</a></td>
+				<td><a href="#/adminproducts/{{p._id}}">{{p.name}}</a></td>
 				<td>{{p.price}}</td>
 				<td><img class="adminproductimage" src="{{p.img}}"></td>
 				<td>{{p.moment}}</td>
+				<td><a href="#/adminproducts/{{p._id}}"><button class="btn btn-success">Edit</button></a></td>
 			</tr>
 		</table>
 
