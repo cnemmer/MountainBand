@@ -1,5 +1,6 @@
-.this {color: white;
+.this {color: gray;
 		margin-left: 200px;}
+
 .adminimg, .adminimg2 {height: 50px;
 			width: 50px;
 			margin-top: -15px;
@@ -19,7 +20,24 @@
 
 .adminform input{margin-bottom: 5px;}
 
-.adminProduct {height: }
-
 .adminproductimage {height: 100px;
-					width: 100px;}
+											width: 100px;}
+
+.productBar {width: 13%;
+							height: 600px;
+							position: fixed;
+							float: left;
+							margin-top: 50px;
+							margin-right: 0px;}
+
+.productPage { width: 75%;
+								height: 1000px;
+								float: right;
+								margin-top: 50px;
+}
+.productMain{ border: 1px solid gray;
+						margin-top: 90px;
+						width: 100%;
+						height: 1500px;
+
+}

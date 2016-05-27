@@ -15,7 +15,6 @@
                 console.log(PCCtrl.clientSubmittedInfo);
                 console.log(token);
                 $.post('/chargeUser', {stripeToken: token.id, customerInfo: PCCtrl.clientSubmittedInfo, email: token.email }, function() {
-                  console.log('here');
                   PCCtrl.redirectURL();
                 });  
                 // You can access the token ID with `token.id`.

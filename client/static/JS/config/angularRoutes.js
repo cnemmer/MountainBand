@@ -31,13 +31,11 @@
 			.when('/adminproducts', {
 				templateUrl: 'partials/admin/adminproducts.html'
 			})
-<<<<<<< HEAD
 			.when('/adminproducts/:id', {
 				templateUrl: 'partials/admin/adminedit.html'
-=======
+			})	
 			.when('/receipt', {
 				templateUrl: 'partials/receipt.html'
->>>>>>> 749bed9b90c2f192dc517a19e7bb6c9436521d2a
 			})
 			.otherwise({
 				redirectTo: '/'

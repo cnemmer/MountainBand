@@ -1,9 +1,10 @@
-myApp.controller("ProductsController", function($scope, ProductsFactory, $location, CheckoutFactory){
-
+myApp.controller("ProductsController", function($scope, ProductsFactory, AdminProductFactory, $location, CheckoutFactory){
+  var self = this;
   // $scope.products = ProductsFactory.products;
   // console.log($scope.products);
   function getProds(){
-    ProductsFactory.index(function(data){
+    AdminProductFactory.index(function(data){
+      console.log(data);
       $scope.products = data;
     })
   }
@@ -19,7 +20,9 @@ myApp.controller("ProductsController", function($scope, ProductsFactory, $locati
   }
 
   $scope.createCust = function(id){
-    $location.path("/checkout/" + id);
+
+    
+    //$location.path("/checkout/" + id);
   }
 
 
