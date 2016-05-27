@@ -31,6 +31,9 @@
 			.when('/adminproducts', {
 				templateUrl: 'partials/admin/adminproducts.html'
 			})
+			.when('/reciept', {
+				templateUrl: 'partials/reciept.html'
+			})
 			.otherwise({
 				redirectTo: '/'
 			})
