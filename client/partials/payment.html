@@ -1,5 +1,7 @@
 <script src="https://checkout.stripe.com/checkout.js"></script>
+
 <script>
+
   $.getScript('https://checkout.stripe.com/checkout.js', function(data) {
 
             var handler = StripeCheckout.configure({
@@ -32,9 +34,10 @@
   });
 </script>
 
+
 <div ng-controller="PaymentController as PC" class="container well">
   <div class="well">
-    <h1>Please Confirm You Information Is Correct</h1>
+    <!-- <h1>Please Confirm You Information Is Correct</h1> -->
     <h3>Name: <b>{{PC.clientSubmittedInfo.firstName}} {{PC.clientSubmittedInfo.lastName}} </b></h3>
     <h3>Phone Number: <b>{{PC.clientSubmittedInfo.phone}}</b></h3>
     <h3>Street Address: <b>{{PC.clientSubmittedInfo.streetAdd}}</b></h3>
@@ -42,7 +45,7 @@
     <h3>Zip Code/Postal Code: <b>{{PC.clientSubmittedInfo.zipcode}}</b></h3>
     <h3>City: <b>{{PC.clientSubmittedInfo.city}}</b></h3>
     <h3>State: <b>{{PC.clientSubmittedInfo.state}}</b></h3>
-    <a href="#/checkout"><button class="btn btn-success" ng-click="PC.remove(PC.clientSubmittedInfo._id)">Back</button></a>
+    <a href="#/checkout"><button class="btn btn-success">Back</button></a>
   </div>
 
 
@@ -52,7 +55,7 @@
 
 <div class="well">
   <h1>Proceed forward with purchase</h1>
-  <button id="customButton" class="btn btn-success">Purchase</button>
+  <button id="customButton" class="btn btn-success" ng-click="PC.createCust()">Purchase</button>
 </div>
 
 
