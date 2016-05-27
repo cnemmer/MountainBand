@@ -25,6 +25,12 @@
 			.when('/storelocate', {
 				templateUrl: 'partials/storelocate.html'
 			})
+			.when('/adminpage', {
+				templateUrl: 'partials/admin/adminpage.html'
+			})
+			.when('/adminproducts', {
+				templateUrl: 'partials/admin/adminproducts.html'
+			})
 			.otherwise({
 				redirectTo: '/'
 			})

@@ -1,0 +1,54 @@
+<div class="container">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+			<h1 class="this">	
+			<img class="adminimg" src="http://www.nevasport.com/imagenes/icono_monte.png"> Admin Dashboard
+			<img class="adminimg2" src="http://www.nevasport.com/imagenes/icono_monte.png">
+			</h1>
+	</nav>
+
+		<ol class="breadcrumb well adminpage">
+		  <li class="adminactive"><a href="#/adminproducts">EditProducts</a></li>
+		  <li><a href="#">Customers</a></li>
+		  <li><a href="#">Recent Orders</a></li>
+		  <li><a href="#">Manage Transactions</a></li>
+		   <li><a href="#/adminpage">Main</a></li>
+		</ol>
+
+	<div class="well" ng-controller="AdminProductController as APC" >
+		<div class="well">
+			<h4>Add A Product</h4>
+			<form class="form-horizontal adminform">
+				<input class="form-control" placeholder="Name" ng-model="APC.newProduct.name">
+				<input class="form-control" placeholder="Price" ng-model="APC.newProduct.price">
+				<input class="form-control" placeholder="Image URL (required)" ng-model="APC.newProduct.img">
+				<input class="form-control" placeholder="Image 2" ng-model="APC.newProduct.img2">
+				<input class="form-control" placeholder="Image 3" ng-model="APC.newProduct.img3">
+				<input class="form-control" placeholder="Image 4" ng-model="APC.newProduct.img4">
+				<input class="form-control" placeholder="Description" ng-model="APC.newProduct.description">
+				<button class="btn btn-default" ng-click="APC.create(APC.newProduct)">Add Product</button>
+			</form>
+		</div>
+
+		<h4>Current Products</h4>
+		<table class="table table-bordered table-striped">
+			<tr>
+				<th>Product Name</th>
+				<th>Price</th>
+				<th>Image</th>
+				<th>Date Added</th>
+			</tr>
+			<tr ng-repeat="p in APC.products">
+				<td><a href="#/adminproduct/{{p._id}}">{{p.name}}</a></td>
+				<td>{{p.price}}</td>
+				<td><img class="adminproductimage" src="{{p.img}}"></td>
+				<td>{{p.moment}}</td>
+			</tr>
+		</table>
+
+	</div>
+	
+</div>
+	
+
+
+	
