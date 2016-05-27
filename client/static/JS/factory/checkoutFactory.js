@@ -9,12 +9,18 @@ myApp.factory('CheckoutFactory', function($http){
 		$http.get('/checkout').success(callback);
 	}
 
-	checkouts.create = function(input,callback){
+	/*checkouts.create = function(input,callback){
 		$http.post('/checkout', input).success(function(clientInfo){
 			checkouts.clientSubmittedInfo = clientInfo;
 			callback();
 		})
-	}
+	}*/
 
+	checkouts.custInfo = function(input, callback){
+		console.log(input)
+		checkouts.clientSubmittedInfo = input;
+		callback(input);
+	}
+	
 	return checkouts;
 })
