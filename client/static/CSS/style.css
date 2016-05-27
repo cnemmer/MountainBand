@@ -18,13 +18,13 @@
 .logo {
 	margin: 10px; 
 }
-.navBar {
+.topNav {
 	text-decoration: none;
 	list-style-type: none;
 	float: right;
 	margin-top: 30px;
 }
-.navBar li {
+.topNav li {
 	display: inline;
 	vertical-align: middle;
 	margin: 20px 10px; 
