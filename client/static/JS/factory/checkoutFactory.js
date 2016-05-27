@@ -17,7 +17,6 @@ myApp.factory('CheckoutFactory', function($http){
 	}*/
 
 	checkouts.custInfo = function(input, callback){
-		console.log(input)
 		checkouts.clientSubmittedInfo = input;
 		callback(input);
 	}

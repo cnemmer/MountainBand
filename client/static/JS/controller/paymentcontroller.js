@@ -1,16 +1,19 @@
-myApp.controller('PaymentController',  function(CheckoutFactory, PaymentFactory){
+myApp.controller('PaymentController', function(CheckoutFactory,PaymentFactory, $location, $rootScope){
 	var self = this;
 
 	this.clientSubmittedInfo = CheckoutFactory.clientSubmittedInfo;
-	console.log(this.clientSubmittedInfo);
 	
 	this.createCust = function(input){
-		PaymentFactory.create(input, function(){
-			console.log("hello");
-			//self.index();
-			//$location.path('/payment');
-		})
+		PaymentFactory.createCust(input);
 	}
 
+	this.redirectURL = function() {
+		console.log('before $location');
+		$rootScope.$apply(function() {
+			$location.path('/receipt');
+		console.log($location);	
+		})
+		
+	}
 
 })

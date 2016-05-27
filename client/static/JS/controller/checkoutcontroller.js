@@ -22,7 +22,6 @@ myApp.controller('CheckoutController',  function(CheckoutFactory, $location){
 	this.proceedToPayment = function(customerInfo){
 		CheckoutFactory.custInfo(customerInfo, function(custData){
 			self.custData = custData;
-			console.log(self.custData);
 			$location.path('/payment');
 		});
 	}
