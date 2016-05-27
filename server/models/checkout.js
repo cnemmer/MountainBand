@@ -1,14 +1,16 @@
 var mongoose = require('mongoose');
 
 var CheckoutClientSchema = new mongoose.Schema({
-	firstName: String,
-	lastName: String,
-	phone: Number,
-	streetAdd: String,
-	unitNum: Number,
-	city: String,
-	zipcode: Number,
-	state: String,
+	'customerInfo[firstName]': String,
+	'customerInfo[lastName]': String,
+	'customerInfo[phone]': Number,
+	'customerInfo[streetAdd]': String,
+	'customerInfo[unitNum]': Number,
+	'customerInfo[city]': String,
+	'customerInfo[zipcode]': Number,
+	'customerInfo[state]': String,
+	email: String,
+	customer: String,
 	created_at: {type: Date, default: new Date}
 })
 
