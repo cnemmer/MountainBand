@@ -14,14 +14,16 @@
                 var PCCtrl = angular.element('#paymentController').scope().PC;
                 console.log(PCCtrl.clientSubmittedInfo);
                 console.log(token);
-                $.post('/chargeUser', {stripeToken: token.id, customerInfo: PCCtrl.clientSubmittedInfo, email: token.email });  
+                $.post('/chargeUser', {stripeToken: token.id, customerInfo: PCCtrl.clientSubmittedInfo, email: token.email }, function() {
+                  console.log('here');
+                  PCCtrl.redirectURL();
+                });  
                 // You can access the token ID with `token.id`.
                 // Get the token ID to your server-side code for use.
               }
             });
 
             $('#customButton').on('click', function(e) {
-              /*angular.element('#paymentController').controller(PC.createCust(PC.clientSubmittedInfo))*/
               // Open Checkout with further options:
               handler.open({
                 name: 'Demo Site',
@@ -37,6 +39,7 @@
             });
 
   });
+
 
 
     //$('.modal-open').removeClass('modal-open');

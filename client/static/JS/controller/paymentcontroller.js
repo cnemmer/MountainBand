@@ -1,4 +1,4 @@
-myApp.controller('PaymentController', function(CheckoutFactory,PaymentFactory){
+myApp.controller('PaymentController', function(CheckoutFactory,PaymentFactory, $location, $rootScope){
 	var self = this;
 
 	this.clientSubmittedInfo = CheckoutFactory.clientSubmittedInfo;
@@ -7,5 +7,13 @@ myApp.controller('PaymentController', function(CheckoutFactory,PaymentFactory){
 		PaymentFactory.createCust(input);
 	}
 
+	this.redirectURL = function() {
+		console.log('before $location');
+		$rootScope.$apply(function() {
+			$location.path('/receipt');
+		console.log($location);	
+		})
+		
+	}
 
 })
