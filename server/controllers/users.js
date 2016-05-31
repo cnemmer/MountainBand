@@ -6,7 +6,7 @@ module.exports = {
 
 	//more like a login validation
 	create: function(req, res){
-
+		
 		if(req.body.name == 'Admin' && 	req.body.password == 'password'){
 					res.json({name: "Admin"})
 				}
