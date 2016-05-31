@@ -1,25 +1,28 @@
+
 <div class="container">
   <nav class="navbar-default navbar-fixed-top">
 
-      <h1 class="this"> 
+      <h1 class="this">
       <img class="adminimg" src="http://www.nevasport.com/imagenes/icono_monte.png"> Mountain Bands
       <img class="adminimg2" src="http://www.nevasport.com/imagenes/icono_monte.png">
       </h1>
   </nav>
 
- 
-    <div class="well productMain">
-      <div class="well productBar">
 
+    <div class="productMain">
+      <div class="productSearch">
+        Name: <input type="text" ng-model="prod.name" placeholder="Name">
+        Price: <input type="text" ng-model="prod.price" placeholder="Price">
+        Metal: <input type="text" ng-model="prod.metal" placeholder="Metal">
       </div>
 
-      <div class="well productPage">
-
+    <div ng-controller="AdminProductController as APC">
+      <div class="productImgs" ng-repeat="prod in APC.products | filter: {name: prod.name, price: prod.price, metal: prod.metal } ">
+            <img ng-src="{{ prod.img }}" alt="{{ prod.description }}">
+          <button ng-click="purchaseItem(prod._id)">Add to cart</button>
+        <p>{{ prod.price | currency}}</p>
+        <p>{{ prod.name }}</p>
       </div>
     </div>
-  
-</div>
-  
-
-
-  
+  </div>
+ </div>

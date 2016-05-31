@@ -16,9 +16,6 @@
 			.when('/payment', {
 				templateUrl: 'partials/payment.html'
 			})
-			.when('/addProduct', {
-				templateUrl: 'partials/addProduct.html'
-			})
 			.when('/products', {
 				templateUrl: 'partials/products.html'
 			})
@@ -33,7 +30,7 @@
 			})
 			.when('/adminproducts/:id', {
 				templateUrl: 'partials/admin/adminedit.html'
-			})	
+			})
 			.when('/receipt', {
 				templateUrl: 'partials/receipt.html'
 			})

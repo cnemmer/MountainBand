@@ -8,7 +8,8 @@ var AdminProductSchema = new mongoose.Schema({
   img2: String,
   img3: String,
   description: String,
+  metal: String,
   moment: String
 });
 
-mongoose.model("AdminProduct", AdminProductSchema); 
+mongoose.model("AdminProduct", AdminProductSchema);

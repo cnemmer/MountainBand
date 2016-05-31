@@ -1,22 +1,22 @@
-/** {
-	margin: 0; 
+* {
+	margin: 0;
 	padding: 0
 }
 #wrapper {
 	width: 100%;
 }
 #header {
-	width: 90%; 
+	width: 90%;
 	margin: 0 auto;
-	padding: 10px; 
-	height: 105px; 
+	padding: 10px;
+	height: 105px;
 }
 #header, .navBar {
 	display: inline-block;
-	vertical-align: bottom; 
+	vertical-align: bottom;
 }
 .logo {
-	margin: 10px; 
+	margin: 10px;
 }
 .navBar {
 	text-decoration: none;
@@ -27,13 +27,34 @@
 .navBar li {
 	display: inline;
 	vertical-align: middle;
-	margin: 20px 10px; 
+	margin: 20px 10px;
 }
-.carousel-inner > .item > img, 
+.carousel-inner > .item > img,
 .carousel-inner > .item > a > img{
 	width: 100%;
 	height: 90%;
-	margin: 0 auto; 
+	margin: 0 auto;
 }
 
-*/
+.productImgs{
+	display: inline-block;
+}
+	.productImgs img{
+		height: 300px;
+		width: 300px;
+	}
+	.productImgs p{
+		margin-left: 111px;
+	}
+
+	.productImgs ul{
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+	}
+	.productImgs ul li{
+		list-style: none;
+		margin-bottom: 25px;
+	}
+	.productImgs ul li img{
+		cursor: pointer;
+	}
