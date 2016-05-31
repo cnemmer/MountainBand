@@ -38,7 +38,7 @@ module.exports = {
 
 	  update: function(req, res){
 	  	console.log(req.body);
-	  	AdminProduct.findOneAndUpdate({_id: req.params.id}, {$set: {name: req.body.name, price: req.body.price}}, {new: true}, function(err){
+	  	AdminProduct.findOneAndUpdate({_id: req.params.id}, {$set: {name: req.body.name, price: req.body.price, img: req.body.img, img1: req.body.img1, img2: req.body.img2, img3: req.body.img3, description: req.body.description, moment: req.body.moment}}, {new: true}, function(err){
 	 		if(err){
 	 			console.log(err)
 	 		}
