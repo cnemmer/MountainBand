@@ -1,15 +1,9 @@
-<script>
-	
-</script>
-
 <div ng-controller="MainviewController">
 
-<div id="main_wrapper">
-
-	<div id="main_header">
+	 <nav class="navbar-default navbar-fixed-top">
 
 		<h1 class="main_this">
-		<img class="main_adminimg" src="http://www.nevasport.com/imagenes/icono_monte.png"><a href="/mainview">  Mountain Bands </a><img class="main_adminimg2" src="http://www.nevasport.com/imagenes/icono_monte.png"></h1>
+		<img class="main_adminimg" src="http://www.nevasport.com/imagenes/icono_monte.png">  Mountain Bands  <img class="main_adminimg2" src="http://www.nevasport.com/imagenes/icono_monte.png"></h1>
 
 		<ul class="main_topNav">
 			<li><a href="#/products">Products</a></li>
@@ -19,11 +13,36 @@
 			<li><a href="#/checkout">Cart</a></li>
 			<li> | </li>
 			<li><a href="#/storelocate">Find Us</a></li>
+			<li> | </li>
+			<li><a href="#/mainview">Home</a></li>
 		</ul>
+	</nav>
 
-	</div><!-- end of main_header -->
+<script>
+	$(document).ready(function(){
+
+		$('.carousel').carousel('time_constant', 'full_width');
+		
+		// Next slide
+		$('.carousel').carousel('next');
+		$('.carousel').carousel('next', [3]); // Move next n times.
+		
+		// Previous slide
+		$('.carousel').carousel('prev');
+		$('.carousel').carousel('prev', [4]); // Move prev n times.
+	})
+</script>
+
+  <div class="carousel carousel-slider">
+    <a class="carousel-item" href="#one!"><img src="./../static/IMG/ring_images/mt_band_flatirons.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="./../static/IMG/ring_images/mt_elk_plat.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="./../static/IMG/ring_images/mt_penant.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="./../static/IMG/ring_images/mt_pikes_gold.jpg"></a>
+    <a class="carousel-item" href="#five!"><img src="./../static/IMG/ring_images/mt_sterling.jpg"></a>
+  </div>
 
 
-</div><!-- end of main_wrapper -->
+
+
 
 </div>

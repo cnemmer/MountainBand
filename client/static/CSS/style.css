@@ -2,9 +2,6 @@
 	margin: 0; 
 	padding: 0;
 }
-#main_wrapper {
-	width: 100%;
-}
 #main_header {
 	width: 90%; 
 	margin: 0 auto;
@@ -38,18 +35,20 @@
 	list-style-type: none;
 	float: right;
 	margin-top: 30px;
+	margin-right: 135px; 
 }
 .main_topNav li {
 	display: inline;
 	vertical-align: middle;
 	margin: 20px 10px; 
 }
+
 .about_banner {
 	background: url("./../IMG/mtn1.jpg");
 	background-repeat: no-repeat;
-	background-position: center center;
+	/*background-position: center center;*/
 	background-size: cover; 
-	height: 325px; 
+	height: 425px; 
 	margin: 0 0 15px 0;
 }
 #about_contain ul {
@@ -58,22 +57,20 @@
 	text-decoration: none;
 	list-style-type: none;
 }
-.about_img {
-	width: 15px; 
-	height: 15px;
-	border-radius: 50px;
-	border: 1px solid grey;
-	margin: 15px;
-	display: inline;
-	vertical-align: middle;
+#about_contain img {
+	width: 135px; 
+	height: 135px;
+	border-radius: 90px;
+	/*border: 1px solid grey;*/
+	margin: 15px 35px;
 }
-
-
-
-/*.carousel-inner > .item > img, 
-.carousel-inner > .item > a > img{
-	width: 100%;
-	height: 90%;
+.about_IMG{
+	display: inline-block;
+	vertical-align: top;
+	
+}
+.btm_container {
+	width: 980px; 
 	margin: 0 auto; 
-}*/
+}
 
