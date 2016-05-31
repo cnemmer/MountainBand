@@ -15,15 +15,16 @@
 
 	
 </style>
+
 </head>
 <body>
 	<a href="/#/">Home</a>
-	<div class="container well" ng-controller="loginController">
+	<div class="container well" ng-controller="UsersController as UC">
 		<div class="well login">
 			<form class="form-inline " >
 			  <div class="form-group">
 			    <label for="exampleInputName2">Name</label></br>
-			    <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter Name">
+			    <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter Name" ng-model="UC.newUser.name">
 			  </div>
 			  <fieldset disabled>
 				  <div class="form-group">
@@ -31,7 +32,7 @@
 				    <input type="password" class="form-control" id="exampleInputEmail2" id="disabledSelect" placeholder="Password">
 				  </div>
 		      </fieldset><br>
-			  <button type="submit" class="btn btn-primary">Login</button><br><br>
+			  <button type="submit" class="btn btn-primary" ng-click="UC.create(UC.newUser)">Login</button><br><br>
 			  <a href="#">Forgot Your Password</a>
 			</form>
 		

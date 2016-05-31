@@ -4,21 +4,22 @@ myApp.controller('UsersController', function(UserFactory ,$location){
 	this.loggedin;
 
 	this.index = function(){
-		UserFactory.index(function(data){
-			self.users = data;
-			// console.log(self.users);
-			self.newUser ={};
+		// UserFactory.index(function(data){
+		// 	self.users = data;
+		// 	// console.log(self.users);
+		// 	self.newUser ={};
 			
-			self.self();
+		// 	self.self();
 
-		})
+		// })
 	}
 
 	this.create = function(input){
-		UserFactory.create(input, function(data){
-			
-			self.newUser = {};
-		})
+		// console.log(input)
+		// UserFactory.create(input, function(data){
+		// 	self.loggedin = data
+		// 	self.newUser = {};
+		// })
 	}
 
 	this.logout = function(){

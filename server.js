@@ -1,6 +1,7 @@
 //Express
 var express = require('express');
 var app = express();
+var session = require('express-session')
 
 //Body Parser
 var bodyParser = require('body-parser');
