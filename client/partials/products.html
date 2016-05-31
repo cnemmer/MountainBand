@@ -1,28 +1,25 @@
-<div>
-  <div id="wrapper">
-  	<div id="header">
-  		<img src="" class="logo">
-  		<ul class="links">
-  			<li>About</li>
-  			<li> | </li>
-  			<li>Products</li>
-  			<li> | </li>
-  			<li>Who We Are</li>
-  			<li> | </li>
-  			<li>Find Us</li>
-  		</ul>
-  	</div>
+<div class="container">
+  <nav class="navbar-default navbar-fixed-top">
 
-  </div>
-</div>
-<div >
-<div ng-controller="ProductsController">
-    <div ng-repeat="prod in products ">
-        <img ng-src="{{ prod.image }}" alt="{{ prod.desc }}" width="200" height="200">
-        <h3>{{ prod.name }}</h3>
-        <h4>{{ prod.price | currency }}</h4>
-      <button ng-click="createCust(prod._id)">Buy Me</button>
+      <h1 class="this"> 
+      <img class="adminimg" src="http://www.nevasport.com/imagenes/icono_monte.png"> Mountain Bands
+      <img class="adminimg2" src="http://www.nevasport.com/imagenes/icono_monte.png">
+      </h1>
+  </nav>
+
+ 
+    <div class="well productMain">
+      <div class="well productBar">
+
+      </div>
+
+      <div class="well productPage">
+
+      </div>
     </div>
-  </div>
-  <div >
+  
 </div>
+  
+
+
+  
