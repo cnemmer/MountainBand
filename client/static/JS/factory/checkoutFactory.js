@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngCookies']);
 
 myApp.factory('CheckoutFactory', function($http){
 	var checkouts = {};

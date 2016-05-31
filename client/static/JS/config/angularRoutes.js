@@ -4,6 +4,9 @@
 			.when('/', {
 				templateUrl: 'partials/mainview.html'
 			})
+			.when('/about', {
+				templateUrl: 'partials/about.html'
+			})
 			.when('/login', {
 				templateUrl: 'partials/login.html'
 			})

@@ -1,34 +1,60 @@
 * {
 	margin: 0;
 	padding: 0
+
+	margin: 0;
+	padding: 0;
+
 }
-#wrapper {
+#main_wrapper {
 	width: 100%;
 }
+
 #header {
+	width: 90%;
+}
+#main_header {
 	width: 90%;
 	margin: 0 auto;
 	padding: 10px;
 	height: 105px;
 }
-#header, .navBar {
+#main_header, .main_this, .main_topNav {
 	display: inline-block;
 	vertical-align: bottom;
 }
 .logo {
 	margin: 10px;
+.main_this {
+	color: gray;
+	margin-left: 200px;
+	width: 600px;
+	text-decoration-color: gray;
 }
-.navBar {
+.main_adminimg, .main_adminimg2 {
+	height: 50px;
+	width: 50px;
+	margin-top: -15px;
+	}
+.main_adminimg {
+	border:0;
+    display:inline-block;
+    transform:scale(-1,1);
+    -webkit-transform:scale(-1,1);
+    -moz-transform:scale(-1,1);
+    -o-transform:scale(-1,1)}
+.main_topNav {
 	text-decoration: none;
 	list-style-type: none;
 	float: right;
 	margin-top: 30px;
 }
-.navBar li {
+.main_topNav li {
 	display: inline;
 	vertical-align: middle;
 	margin: 20px 10px;
 }
+
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img{
 	width: 100%;
@@ -58,3 +84,36 @@
 	.productImgs ul li img{
 		cursor: pointer;
 	}
+
+.about_banner {
+	background: url("./../IMG/mtn1.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 325px;
+	margin: 0 0 15px 0;
+}
+#about_contain ul {
+	width: 640px;
+	margin: 0 auto;
+	text-decoration: none;
+	list-style-type: none;
+}
+.about_img {
+	width: 15px;
+	height: 15px;
+	border-radius: 50px;
+	border: 1px solid grey;
+	margin: 15px;
+	display: inline;
+	vertical-align: middle;
+}
+
+
+
+/*.carousel-inner > .item > img,
+.carousel-inner > .item > a > img{
+	width: 100%;
+	height: 90%;
+	margin: 0 auto;
+}*/
