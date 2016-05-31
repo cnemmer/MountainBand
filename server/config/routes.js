@@ -1,5 +1,4 @@
 var Checkout = require('./../controllers/checkouts');
-var Products = require("./../controllers/products.js");
 var User = require("./../controllers/users.js");
 var AdminProduct =  require("./../controllers/adminproducts.js");
 
@@ -11,11 +10,7 @@ module.exports = function(app){
 
 	app.post('/chargeUser', Checkout.charge);
 
-	app.get('/products', Products.index);
-	app.post('/addProduct', Products.create);
-
-
-
+	app.get('/products', AdminProduct.index);
 
 	app.post('/users', User.create);
 
@@ -30,4 +25,3 @@ module.exports = function(app){
 
 	app.put('/adminproducts/:id', AdminProduct.update);
 }
-

@@ -4,7 +4,7 @@ myApp.factory('CheckoutFactory', function($http){
 	var checkouts = {};
 	checkouts.clientSubmittedInfo;
 
-	
+
 	checkouts.index = function(callback){
 		$http.get('/checkout').success(callback);
 	}
@@ -20,6 +20,6 @@ myApp.factory('CheckoutFactory', function($http){
 		checkouts.clientSubmittedInfo = input;
 		callback(input);
 	}
-	
+
 	return checkouts;
 })

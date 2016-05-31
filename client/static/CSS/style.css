@@ -73,4 +73,27 @@
 	width: 980px; 
 	margin: 0 auto; 
 }
+.productImgs{
+	display: inline-block;
+}
+
+	.productImgs img{
+		height: 300px;
+		width: 300px;
+	}
+	.productImgs p{
+		margin-left: 111px;
+	}
+
+	.productImgs ul{
+		padding: 0 0 0 0;
+		margin: 0 0 0 0;
+	}
+	.productImgs ul li{
+		list-style: none;
+		margin-bottom: 25px;
+	}
+	.productImgs ul li img{
+		cursor: pointer;
+	}
 
