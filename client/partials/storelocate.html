@@ -1,9 +1,54 @@
-<div ng-controller="LocationController">
-	<h1>Hello</h1>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="initial-scale=1.0">
+  <style>
+		html, body {
+  		height: 100%;
+  		margin: 0;
+  		padding: 0;
+		}
+		#map {
+			width: 70%;
+  		height: 50%;
+		}
+	</style>
+  <script>
+    var map;
+    function initMap() {
+    	var myLatLng = {lat: 38.848699, lng: -104.864652}
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        zoom: 18
+        /*mapTypeId: google.maps.MapTypeId.HYBRID*/
+      }); 
 
-//find order by id (function (err, doc))
+      var marker = new google.maps.Marker({
+      	position: myLatLng,
+      	map: map,
+      	title: 'All That Glitters'
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdhVP6OJ7EXbsrmsAYQJgbDRzRrBPrU5E&callback=initMap"
+  async defer>
+  </script>
 
-remove the found order from DB
+</head>
 
-res.json doc
+<body>
+	<div ng-controller="LocationController">
+		<h1>Hello</h1>
+    <div id="map" class="container well"></div>
+        
+	</div>
+</body>
+</html>
+		
+  		
+
+
+
+  
