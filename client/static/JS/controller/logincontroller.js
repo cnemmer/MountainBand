@@ -1,7 +1,7 @@
-myApp.controller('UsersController', function(UserFactory ,$location){
+myApp.controller('UsersController', function(UserFactory ,$cookies, $location){
 	var self = this;
 	this.users;
-	this.loggedin;
+	this.loggedin = $cookies.get('name');
 
 	this.index = function(){
 		// UserFactory.index(function(data){
@@ -15,11 +15,16 @@ myApp.controller('UsersController', function(UserFactory ,$location){
 	}
 
 	this.create = function(input){
-		// console.log(input)
-		// UserFactory.create(input, function(data){
-		// 	self.loggedin = data
-		// 	self.newUser = {};
-		// })
+		
+		UserFactory.create(input, function(user){
+			
+			$cookies.put('name', user.name);
+			self.loggedin = $cookies.get('name');
+			console.log(self.loggedin)
+
+			self.newUser = {};
+			$location.path('/adminpage');
+		})
 	}
 
 	this.logout = function(){
@@ -27,10 +32,10 @@ myApp.controller('UsersController', function(UserFactory ,$location){
 		self.loggedin = {};
 	}
 
-	this.self = function(){
+	// this.self = function(){
 
-		self.loggedin = UserFactory.user;
-	}
+	// 	self.loggedin = UserFactory.user;
+	// }
 
 	
 

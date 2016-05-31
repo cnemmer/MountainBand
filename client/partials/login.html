@@ -26,10 +26,10 @@
 			    <label for="exampleInputName2">Name</label></br>
 			    <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter Name" ng-model="UC.newUser.name">
 			  </div>
-			  <fieldset disabled>
+			  <fieldset enabled>
 				  <div class="form-group">
 				    <label for="exampleInputEmail2">Password</label><br>
-				    <input type="password" class="form-control" id="exampleInputEmail2" id="disabledSelect" placeholder="Password">
+				    <input type="password" class="form-control" id="exampleInputEmail2"  id="exampleInputName2" ng-model="UC.newUser.password" placeholder="Password">
 				  </div>
 		      </fieldset><br>
 			  <button type="submit" class="btn btn-primary" ng-click="UC.create(UC.newUser)">Login</button><br><br>
