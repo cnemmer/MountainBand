@@ -37,6 +37,12 @@
 			.when('/receipt', {
 				templateUrl: 'partials/receipt.html'
 			})
+			.when('/mapcode', {
+				templateUrl: 'partials/mapcode.html'
+			})
+			.when('/map', {
+				templateUrl: 'partials/map.html'
+			})
 			.otherwise({
 				redirectTo: '/'
 			})
