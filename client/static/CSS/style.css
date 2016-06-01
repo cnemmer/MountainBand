@@ -108,7 +108,8 @@
 .carousel-caption h3 {
 	color: gray;
 	font-style: italic;
-	font-size: 3rem;
+	font-size: 5rem;
+	font-family: 'Arizonia', cursive;
 }
 .carousel-caption p {
 	color: gray;
@@ -145,4 +146,3 @@
 	.productImgs button a{
 		color: black;
 	}
->>>>>>> 64509523d976d81da121218b0b5f3bd558ac194c
