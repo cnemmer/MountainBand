@@ -3,21 +3,43 @@
     <head> 
        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
        <title>Google Maps API v3 Directions Example</title> 
-      
+      <style>
+		html, body {
+  		height: 100%;
+  		margin: 0;
+      margin-top: 50px;
+  		padding: 0;
+		}
+		#map {
+			width: 70%;
+  		height: 50%;
+  		padding-left: 20%;
+  		margin: 0 auto;
+		}
+		#panel{
+			margin: 0 auto;
+			width: 50%}
+      .map4 {padding-left: 30%;}
+
+	</style>
     </head> 
-    <body style="font-family: Arial; font-size: 12px;"> 
-       <div style="width: 600px;">
-         <div id="map" style="width: 280px; height: 400px; float: left;"></div> 
-         <div id="panel" style="width: 300px; float: right;"></div> 
+
+    <body > 
+       
+       <div class="well">
+        <span class="map4">
+       
+       <a href="#/storelocate"><button class="btn btn-success">See This Store On Map</button></a>
+      <a href="#/storelocate3"><button class="btn btn-info">Enter Your Location For Directions</button></a>
+      </span>
+         <div id="map" ></div> 
+        
        </div>
+        <div class="well" id="panel"></div> 
        
        <script type="text/javascript"> 
 
 
-
-
-
-    
          var directionsService = new google.maps.DirectionsService();
          var directionsDisplay = new google.maps.DirectionsRenderer();
     
@@ -38,7 +60,7 @@
       
         var infoWindow = new google.maps.InfoWindow({map: map});
 
-        // Try HTML5 geolocation.
+       
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
           	
@@ -69,12 +91,6 @@
         }
       
 
-      // function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-      //   infoWindow.setPosition(pos);
-      //   infoWindow.setContent(browserHasGeolocation ?
-      //                         'Error: The Geolocation service failed.' :
-      //                         'Error: Your browser doesn\'t support geolocation.');
-      // }
     </script>
 
 

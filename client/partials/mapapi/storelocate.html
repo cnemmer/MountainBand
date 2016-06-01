@@ -22,6 +22,8 @@
 			width: 70%;
   		height: 50%;
 		}
+    .map3{margin-left: 35%}
+    .map4{padding-left: 30%}
 	</style>
   <script>
 
@@ -44,6 +46,19 @@
       	map: map,
       	title: 'All That Glitters'
       });
+
+      // var directionsDisplay = new google.maps.DirectionsRenderer({
+      //   map: map
+
+      //  });
+
+
+      //   var request = {
+      //     destination: myLatLng,
+      //     origin: chicago,
+      //     travelMode: google.maps.TravelMode.DRIVING
+      //   };
+
      
     }
    
@@ -58,7 +73,12 @@
   <div class="well">
 		<h1>Find Us</h1>
     <div id="map" class="container well"></div>
-      2616 W Colorado Ave #18, Colorado Springs, CO 80904
+    <span class="map3">2616 W Colorado Ave #18, Colorado Springs, CO 80904</span> <br>
+    <div class=" map4">
+       
+       <a href="#/storelocate2"><button class="btn btn-primary">Directions to This Location</button></a>
+       <a href="#/storelocate3"><button class="btn btn-info">Enter Your Location For Directions</button></a>
+      <div>
 	</div>
 
 

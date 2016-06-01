@@ -22,9 +22,7 @@
 			.when('/products', {
 				templateUrl: 'partials/products.html'
 			})
-			.when('/storelocate', {
-				templateUrl: 'partials/storelocate.html'
-			})
+			
 			.when('/adminpage', {
 				templateUrl: 'partials/admin/adminpage.html'
 			})
@@ -37,11 +35,15 @@
 			.when('/receipt', {
 				templateUrl: 'partials/receipt.html'
 			})
-			.when('/mapcode', {
-				templateUrl: 'partials/mapcode.html'
+
+			.when('/storelocate', {
+				templateUrl: 'partials/mapapi/storelocate.html'
 			})
-			.when('/map', {
-				templateUrl: 'partials/map.html'
+			.when('/storelocate2', {
+				templateUrl: 'partials/mapapi/storelocate2.html'
+			})
+			.when('/storelocate3', {
+				templateUrl: 'partials/mapapi/storelocate3.html'
 			})
 			.otherwise({
 				redirectTo: '/'
