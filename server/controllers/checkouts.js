@@ -67,49 +67,9 @@ module.exports = {
 			})
 		});
 
-		// YOUR CODE: When it's time to charge the customer again, retrieve the customer ID!
-
-		/*stripe.charges.create({
-		  amount: 1500, // amount in cents, again
-		  currency: "usd",
-		  customer: customerId // Previously stored, then retrieved
-		});*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-		/*var charge = stripe.charges.create({
-		  amount: 100, // amount in cents, again
-		  currency: "usd",
-		  source: stripeToken,
-		  description: "Example charge"
-		}, function(err, charge) {
-		  if (err && err.type === 'StripeCardError') {
-		    // The card has been declined
-		    response.json(err);
-		  } else {
-			  response.json(charge);
-		  }
-		});
-
-
-
 		
 
-
-
-
-
-		var checkoutClient = new Checkout(request.body);
+		/*var checkoutClient = new Checkout(request.body);
 		checkoutClient.save(function(err,clientInfo){
 			if(err){
 				console.log(err)

@@ -1,7 +1,8 @@
-myApp.controller('PaymentController', function(CheckoutFactory,PaymentFactory, $location, $rootScope){
+myApp.controller('PaymentController', function(CheckoutFactory,PaymentFactory, ProductsFactory, $location, $rootScope){
 	var self = this;
 
 	this.clientSubmittedInfo = CheckoutFactory.clientSubmittedInfo;
+	this.productForCheckout = ProductsFactory.productInfoById;
 	
 	this.createCust = function(input){
 		PaymentFactory.createCust(input);

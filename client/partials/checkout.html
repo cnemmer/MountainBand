@@ -44,7 +44,7 @@ img{
 	<div class="well mid">
 		<div>
 			<h4>{{CC.productForCheckout.name}}</h4>
-			<h4>{{CC.productForCheckout.price}}</h4>
+			<h4>{{CC.productForCheckout.price | currency}}</h4>
 		</div>
 		<div>
 			 <img ng-src="{{CC.productForCheckout.img}}" alt="{{ prod.description }}">

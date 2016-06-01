@@ -5,6 +5,9 @@
 
   $.getScript('https://checkout.stripe.com/checkout.js', function(data) {
 
+            var PCCtrl = angular.element('#paymentController').scope().PC;
+
+
             var handler = StripeCheckout.configure({
               key: 'pk_test_N9MUTFJktVhQ0TGm3kC4hitW',
               /*image: '/img/documentation/checkout/marketplace.png',*/
@@ -12,8 +15,9 @@
               locale: 'auto',
               token: function(token) {
                 var PCCtrl = angular.element('#paymentController').scope().PC;
-                console.log(PCCtrl.clientSubmittedInfo);
-                console.log(token);
+                console.log(PCCtrl.productForCheckout)
+                /*console.log(PCCtrl.clientSubmittedInfo);
+                console.log(token);*/
                 $.post('/chargeUser', {stripeToken: token.id, customerInfo: PCCtrl.clientSubmittedInfo, email: token.email }, function() {
                   PCCtrl.redirectURL();
                 });  
@@ -24,10 +28,11 @@
 
             $('#customButton').on('click', function(e) {
               // Open Checkout with further options:
+              console.log(PCCtrl.productForCheckout.price)
               handler.open({
-                name: 'Demo Site',
-                description: '2 widgets',
-                amount: 2000
+                name: PCCtrl.productForCheckout.name,
+                description: 'Mountain Band',
+                amount: PCCtrl.productForCheckout.price /*+ "00"  */ 
               });
               e.preventDefault();
             });

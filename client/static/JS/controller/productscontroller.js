@@ -18,7 +18,8 @@ myApp.controller("ProductsController", function(ProductsFactory, AdminProductFac
   
   //Call getProdsFromDatabase To Load products.html With All Products
   this.getProdsFromDatabase();
- })
+ 
+ }) //Closes ProductsController
 
 
 

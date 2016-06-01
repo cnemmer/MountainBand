@@ -4,7 +4,7 @@ myApp.controller('CheckoutController',  function(CheckoutFactory, ProductsFactor
 	this.newCustomer = CheckoutFactory.clientSubmittedInfo;
 	this.productForCheckout = ProductsFactory.productInfoById;
 
-	console.log(this.productForCheckout);
+	/*console.log(this.productForCheckout);*/
 
 	this.index = function(){
 			self.newCustomer = {};
