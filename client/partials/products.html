@@ -11,10 +11,23 @@
 
     <div ng-controller="AdminProductController as APC">
       <div class="productImgs" ng-repeat="prod in APC.products | filter: {name: prod.name, price: prod.price, metal: prod.metal } ">
-            <img ng-src="{{ prod.img }}" alt="{{ prod.description }}">
-          <button ng-click="purchaseItem(prod._id)">Add to cart</button>
+        <!-- <script type="text/ng-template" id="products.html">
+          <div class="modal-body">
+            <ul>
+              <li ng-repeat="prod in APC.products" > -->
+                <img ng-src="{{ prod.img }}" alt="{{ prod.description }}">
+              <!-- </li>
+            </ul>
+          </div>
+        </script> -->
+        <button ng-click=open()><a href="#/checkout/{{prod._id}}">Add to cart</a></button>
         <p>{{ prod.price | currency}}</p>
         <p>{{ prod.name }}</p>
     </div>
   </div>
+
+  <script type="text/ng-template" id="myModalContent">
+
+
+
  </div>
