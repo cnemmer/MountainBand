@@ -35,4 +35,5 @@ myApp.controller('AdminProductController', function(AdminProductFactory, $routeP
 	this.show($routeParams.id);
 
 	this.index();
+
 })
