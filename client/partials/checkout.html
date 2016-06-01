@@ -1,47 +1,53 @@
 <style >
 
 .well{
-  background: #B7A389 !important;
   margin-top: 100px;
-
 	margin-top: 5%;
-  /*background: #B7A389 !important;*/
+}
 
+.mid { 
+	width: 30% !important;
+	display: inline-block;
+	background: white !important;
 }
- .mid { 
- 	width: 40% !important;
- 	background: white !important;
+
+fieldset{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5%;
+	width: 60%;
 }
+
 .form-control{
 	margin:3% 0% 3% 0% !important;
 }
+
 .btn{ 
  	border-radius: 0px; 
 }
+
 .form-control{ 
  	border-radius: 0px; 
 }
-  
+
+img{
+	width: 80%;
+	height: 50%;
+}  
    
 </style>
 
-	
-</style>
-
-<div class="container well" ng-controller="CheckoutController as CC">
-	
+<div class="well" ng-controller="CheckoutController as CC">
 	
 
 <div class"well main">
 	<div class="well mid">
-
 		<div>
-			<h4>Placeholder Name</h4>
-			<h4>Placeholder Price</h4>
-			<h4>Placeholder Description</h4>
+			<h4>{{CC.productForCheckout.name}}</h4>
+			<h4>{{CC.productForCheckout.price}}</h4>
 		</div>
 		<div>
-			<h4>Placholder Img</h4>
+			 <img ng-src="{{CC.productForCheckout.img}}" alt="{{ prod.description }}">
 		</div>
 	</div>
 
@@ -151,3 +157,5 @@
 
 			
 				
+  
+
