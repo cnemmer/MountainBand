@@ -1,10 +1,49 @@
-myApp.controller("ProductsController", function($scope, AdminProductFactory, $location, CheckoutFactory){
+myApp.controller("ProductsController", function(ProductsFactory, AdminProductFactory, CheckoutFactory, $location){
+	var self = this;
 
-  function getProds(){
+  this.getProdsFromDatabase = function(){
     AdminProductFactory.index(function(data){
-      $scope.products = data;
+      self.products = data;
     })
   }
-  getProds();
+
+  this.sendProdToCheckout = function(productId){
+  	
+  }
+
+  this.getProdsFromDatabase();
 
  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*$scope.open = function(size){
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: "products.html",
+      controller: "ProductsController",
+      size: size,
+      resolve: {
+        getProds(){
+          return $scope.products;
+        }
+      }
+    });
+    modelInstance.result.then(function(){
+    })
+  }*/
+      
