@@ -1,13 +1,37 @@
-myApp.controller("ProductsController", function($scope, AdminProductFactory, $location, CheckoutFactory, $uiModal, $log){
+myApp.controller("ProductsController", function(ProductsFactory, AdminProductFactory, CheckoutFactory, $location){
+	var self = this;
 
-  function getProds(){
+  this.getProdsFromDatabase = function(){
     AdminProductFactory.index(function(data){
-      $scope.products = data;
+      self.products = data;
     })
   }
-  getProds();
 
-  $scope.open = function(size){
+  this.sendProdToCheckout = function(productId){
+  	
+  }
+
+  this.getProdsFromDatabase();
+
+ })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*$scope.open = function(size){
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: "products.html",
@@ -20,7 +44,6 @@ myApp.controller("ProductsController", function($scope, AdminProductFactory, $lo
       }
     });
     modelInstance.result.then(function(){
-      
     })
-  }
- })
+  }*/
+      

@@ -1,23 +1,11 @@
-myApp.controller('CheckoutController',  function(CheckoutFactory, $location){
+myApp.controller('CheckoutController',  function(CheckoutFactory, $location, $routeParams){
 	var self = this;
 	//this.clientSubmittedInfo = CheckoutFactory.clientSubmittedInfo;
 	this.newCustomer = CheckoutFactory.clientSubmittedInfo;
 
-
-
 	this.index = function(){
-	/*	CheckoutFactory.index(function(data){
-			self.customers = data;*/
 			self.newCustomer = {};
-		/*})*/
 	}
-
-	/*this.createCust = function(input){
-		CheckoutFactory.create(input, function(){
-			self.index();
-			$location.path('/payment');
-		})
-	}*/
 
 	this.proceedToPayment = function(customerInfo){
 		CheckoutFactory.custInfo(customerInfo, function(custData){
@@ -28,5 +16,7 @@ myApp.controller('CheckoutController',  function(CheckoutFactory, $location){
 
 	this.index();
 
+}) /*Closes CheckoutController*/
 
-})
+
+	
