@@ -1,5 +1,8 @@
 <html ng-app="myApp">
 <head>
+
+	<!--responsiveness -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mountain Band/Project Week</title>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
@@ -34,6 +37,23 @@
 	<script src="/static/JS/controller/admin/controllers.js"></script>
 </head>
 <body>
+<nav class="navbar-default navbar-fixed-top">
+
+		<h1 class="main_this">
+		<img class="main_adminimg" src="http://www.nevasport.com/imagenes/icono_monte.png">  Mountain Bands  <img class="main_adminimg2" src="http://www.nevasport.com/imagenes/icono_monte.png"></h1>
+
+		<ul class="main_topNav">
+			<li><a href="#/products">Products</a></li>
+			<li> | </li>
+			<li><a href="#/about">About Us</a></li>
+			<li> | </li>
+			<li><a href="#/checkout">Cart</a></li>
+			<li> | </li>
+			<li><a href="#/storelocate">Find Us</a></li>
+			<li> | </li>
+			<li><a href="#/mainview">Home</a></li>
+		</ul>
+	</nav>
 
 	<div ng-view=""></div>
 </body>
