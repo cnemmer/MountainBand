@@ -98,6 +98,41 @@
 	.productImgs ul li img{
 		cursor: pointer;
 	}
+
+#myCarousel {
+	margin-bottom: -20px; 
+}
+.carousel-caption {
+	text-align: right; 
+}
+.carousel-caption h3 {
+	color: gray;
+	font-style: italic;
+	font-size: 3rem;
+}
+.carousel-caption p {
+	color: gray;
+	font-style: italic;
+}
+.item img {
+	margin: 0 auto;
+}
+.lowerBox {
+	background: gray;
+	color: white;
+	text-align: center;
+	width: 100%;
+	height: 450px;
+}
+.lowerBox h1 {
+	font-size: 6rem;
+	font-weight: 900;
+	padding-top: 150px; 
+}
+.lowerBox h4 {
+	font-size: 4rem;
+}
+
 	.productImgs button{
 		background-color: green;
 		position: absolute;
@@ -110,3 +145,4 @@
 	.productImgs button a{
 		color: black;
 	}
+>>>>>>> 64509523d976d81da121218b0b5f3bd558ac194c

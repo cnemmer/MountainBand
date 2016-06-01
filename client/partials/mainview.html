@@ -1,48 +1,75 @@
-<div ng-controller="MainviewController">
-
-	 <nav class="navbar-default navbar-fixed-top">
-
-		<h1 class="main_this">
-		<img class="main_adminimg" src="http://www.nevasport.com/imagenes/icono_monte.png">  Mountain Bands  <img class="main_adminimg2" src="http://www.nevasport.com/imagenes/icono_monte.png"></h1>
-
-		<ul class="main_topNav">
-			<li><a href="#/products">Products</a></li>
-			<li> | </li>
-			<li><a href="#/about">About Us</a></li>
-			<li> | </li>
-			<li><a href="#/checkout">Cart</a></li>
-			<li> | </li>
-			<li><a href="#/storelocate">Find Us</a></li>
-			<li> | </li>
-			<li><a href="#/mainview">Home</a></li>
-		</ul>
-	</nav>
+<div>
 
 <script>
 	$(document).ready(function(){
+		Text();
+		function Text(){
+			$('.stuff').fadeIn(1000, function(){
+				$(this).fadeIn(4500);
+			}) 
+		}
 
-		$('.carousel').carousel('time_constant', 'full_width');
-		
-		// Next slide
-		$('.carousel').carousel('next');
-		$('.carousel').carousel('next', [3]); // Move next n times.
-		
-		// Previous slide
-		$('.carousel').carousel('prev');
-		$('.carousel').carousel('prev', [4]); // Move prev n times.
-	})
+	});
 </script>
-
-  <div class="carousel carousel-slider">
-    <a class="carousel-item" href="#one!"><img src="./../static/IMG/ring_images/mt_band_flatirons.jpg"></a>
-    <a class="carousel-item" href="#two!"><img src="./../static/IMG/ring_images/mt_elk_plat.jpg"></a>
-    <a class="carousel-item" href="#three!"><img src="./../static/IMG/ring_images/mt_penant.jpg"></a>
-    <a class="carousel-item" href="#four!"><img src="./../static/IMG/ring_images/mt_pikes_gold.jpg"></a>
-    <a class="carousel-item" href="#five!"><img src="./../static/IMG/ring_images/mt_sterling.jpg"></a>
-  </div>
-
-
-
-
-
+<style>
+	.carousel {margin-top: 65px;}
+</style>
+	<div id="myCarousel" class="carousel slide">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+		</ol>
+		<div class="carousel-inner">
+			
+			<div class="item active">
+				<img src="./static/IMG/ring_images/mt_band_flatirons.jpg" class="img-responsive">
+				<div class="carousel-caption">
+					<h3>Handcrafted</h3>
+					<p>perfected with precision</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="./static/IMG/ring_images/mt_elk_plat.jpg" class="img-responsive">
+					<div class="carousel-caption">
+					<h3>Handcrafted</h3>
+					<p>perfected with precision</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="./static/IMG/ring_images/mt_penant.jpg" class="img-responsive">
+				<div class="carousel-caption">
+					<h3>Handcrafted</h3>
+					<p>perfected with precision</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="./static/IMG/ring_images/mt_pikes_gold.jpg" class="img-responsive">
+				<div class="carousel-caption">
+					<h3>Handcrafted</h3>
+					<p>perfected with precision</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="./static/IMG/ring_images/mt_sterling.jpg" class="img-responsive">
+				<div class="carousel-caption">
+					<h3>Handcrafted</h3>
+					<p>perfected with precision</p>
+				</div>
+			</div>
+					
+		</div>
+		<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+			<span class="icon-prev"></span>
+		</a>
+		<a class="carousel-control right" href="#myCarousel" data-slide="next">
+			<span class="icon-next"></span>
+		</a>
+	</div>
+	<div class="lowerBox">
+		<h1>Someone Said Something Awesome</h1>
+		<h4 class="stuff">"Amazing Stuff Said About Things"</h4>
+	</div>
 </div>
