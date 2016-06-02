@@ -1,6 +1,7 @@
 
 <script src="https://checkout.stripe.com/checkout.js"></script>
 
+
 <script>
 
   $.getScript('https://checkout.stripe.com/checkout.js', function(data) {
@@ -28,11 +29,12 @@
 
             $('#customButton').on('click', function(e) {
               // Open Checkout with further options:
-              console.log(PCCtrl.productForCheckout.price)
+              /*console.log(PCCtrl.productForCheckout.price)*/
+             
               handler.open({
                 name: PCCtrl.productForCheckout.name,
                 description: 'Mountain Band',
-                amount: PCCtrl.productForCheckout.price /*+ "00"  */ 
+                amount: /*PCCtrl.productForCheckout.price*/ "1,750" 
               });
               e.preventDefault();
             });

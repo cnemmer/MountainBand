@@ -11,6 +11,7 @@ myApp.factory('ProductsFactory', function($http){
 		});
 	}
 
+
 	return products;
 	
 }) //Closes ProductsFactory
