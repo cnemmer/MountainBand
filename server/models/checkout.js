@@ -9,6 +9,8 @@ var CheckoutClientSchema = new mongoose.Schema({
 	'customerInfo[city]': String,
 	'customerInfo[zipcode]': Number,
 	'customerInfo[state]': String,
+	'productInfo[name]': String,
+	'productInfo[price]': Number,
 	email: String,
 	customer: String,
 	created_at: {type: Date, default: new Date}

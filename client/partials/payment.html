@@ -12,10 +12,10 @@
       locale: 'auto',
       token: function(token) {
         var PCCtrl = angular.element('#paymentController').scope().PC;
-        console.log(PCCtrl.productForCheckout)
+        console.log(PCCtrl.productForCheckout);
         /*console.log(PCCtrl.clientSubmittedInfo);
         console.log(token);*/
-        $.post('/chargeUser', {stripeToken: token.id, customerInfo: PCCtrl.clientSubmittedInfo, email: token.email }, function() {
+        $.post('/chargeUser', {stripeToken: token.id, customerInfo: PCCtrl.clientSubmittedInfo, productInfo: PCCtrl.productForCheckout, email: token.email }, function() {
           PCCtrl.redirectURL();
         });  
         // You can access the token ID with `token.id`.
@@ -29,7 +29,7 @@
       handler.open({
         name: PCCtrl.productForCheckout.name,
         description: 'Mountain Band',
-        amount: /*PCCtrl.productForCheckout.price*/ 1750 
+        amount: PCCtrl.productForCheckout.price * 100
       });
       e.preventDefault();
     });
