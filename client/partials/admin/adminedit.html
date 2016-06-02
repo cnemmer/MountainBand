@@ -6,13 +6,13 @@
 			</h1>
 	</nav>
 
-		<ol class="breadcrumb well adminpage">
-		  <li class="adminactive"><a href="#/adminproducts">EditProducts</a></li>
-		  <li><a href="#">Customers</a></li>
-		  <li><a href="#">Recent Orders</a></li>
-		  <li><a href="#">Manage Transactions</a></li>
-		   <li><a href="#/adminpage">Main</a></li>
-		</ol>
+	<ol class="breadcrumb well adminpage">
+	  <li class="adminactive"><a href="#/adminproducts">EditProducts</a></li>
+	  <li><a href="#">Customers</a></li>
+	  <li><a href="#">Recent Orders</a></li>
+	  <li><a href="#">Manage Transactions</a></li>
+	  <li><a href="#/adminpage">Main</a></li>
+	</ol>
 
 	<div class="well" ng-controller="AdminProductController as APC" >
 		<table class="table table-bordered table-striped">
@@ -27,10 +27,11 @@
 			<tr ng-repeat="e in APC.edit">
 				<td>{{e.name}}</td>
 				<td>{{e.price}}</td>
-				<td ><img class="adminproductimage" src="{{e.img}}">
-					 <img class="adminproductimage" src="{{e.img1}}">
-					 <img class="adminproductimage" src="{{e.img2}}">
-					 <img class="adminproductimage" src="{{e.img3}}">
+				<td >
+					<img class="adminproductimage" src="{{e.img}}">
+				  <img class="adminproductimage" src="{{e.img1}}">
+					<img class="adminproductimage" src="{{e.img2}}">
+				  <img class="adminproductimage" src="{{e.img3}}">
 				</td>
 				<td>
 					{{e.description}}
@@ -62,4 +63,3 @@
 	</div>
 	
 </div>
-	

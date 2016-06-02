@@ -1,3 +1,4 @@
+//Users Factory
 myApp.factory('UserFactory', function($http){
 	var factory = {}
 
@@ -5,8 +6,8 @@ myApp.factory('UserFactory', function($http){
 		$http.post('/users', input).success(callback)
 	}
 
-	// console.log('hello');
-
 	return factory
 
-})
+}) //Closes UserFactory
+	
+

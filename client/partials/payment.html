@@ -1,61 +1,53 @@
-
 <script src="https://checkout.stripe.com/checkout.js"></script>
-
-
 <script>
 
   $.getScript('https://checkout.stripe.com/checkout.js', function(data) {
 
-            var PCCtrl = angular.element('#paymentController').scope().PC;
+    var PCCtrl = angular.element('#paymentController').scope().PC;
 
+    var handler = StripeCheckout.configure({
+      key: 'pk_test_N9MUTFJktVhQ0TGm3kC4hitW',
+      /*image: '/img/documentation/checkout/marketplace.png',*/
+      image: '/static/IMG/logo.png',
+      locale: 'auto',
+      token: function(token) {
+        var PCCtrl = angular.element('#paymentController').scope().PC;
+        console.log(PCCtrl.productForCheckout)
+        /*console.log(PCCtrl.clientSubmittedInfo);
+        console.log(token);*/
+        $.post('/chargeUser', {stripeToken: token.id, customerInfo: PCCtrl.clientSubmittedInfo, email: token.email }, function() {
+          PCCtrl.redirectURL();
+        });  
+        // You can access the token ID with `token.id`.
+        // Get the token ID to your server-side code for use.
+      }
+    });
 
-            var handler = StripeCheckout.configure({
-              key: 'pk_test_N9MUTFJktVhQ0TGm3kC4hitW',
-              /*image: '/img/documentation/checkout/marketplace.png',*/
-              image: '/static/IMG/logo.png',
-              locale: 'auto',
-              token: function(token) {
-                var PCCtrl = angular.element('#paymentController').scope().PC;
-                console.log(PCCtrl.productForCheckout)
-                /*console.log(PCCtrl.clientSubmittedInfo);
-                console.log(token);*/
-                $.post('/chargeUser', {stripeToken: token.id, customerInfo: PCCtrl.clientSubmittedInfo, email: token.email }, function() {
-                  PCCtrl.redirectURL();
-                });  
-                // You can access the token ID with `token.id`.
-                // Get the token ID to your server-side code for use.
-              }
-            });
-
-            $('#customButton').on('click', function(e) {
-              // Open Checkout with further options:
-              /*console.log(PCCtrl.productForCheckout.price)*/
-             
-              handler.open({
-                name: PCCtrl.productForCheckout.name,
-                description: 'Mountain Band',
-                amount: /*PCCtrl.productForCheckout.price*/ "1,750" 
-              });
-              e.preventDefault();
-            });
-
-            // Close Checkout on page navigation:
-            $(window).on('popstate', function() {
-              handler.close();
-            });
+    $('#customButton').on('click', function(e) {
+      // Open Checkout with further options:
+      /*console.log(PCCtrl.productForCheckout.price)*/
+      handler.open({
+        name: PCCtrl.productForCheckout.name,
+        description: 'Mountain Band',
+        amount: /*PCCtrl.productForCheckout.price*/ 1750 
+      });
+      e.preventDefault();
+    });
+     
+    // Close Checkout on page navigation:
+    $(window).on('popstate', function() {
+      handler.close();
+    });
 
   });
 
-
-
-    //$('.modal-open').removeClass('modal-open');
-    $('div').removeClass('modal-backdrop in');
+  //Remove Modal Backdrop Upon Page Load
+  $('div').removeClass('modal-backdrop in');
 
 </script>
 
 <div id="paymentController" ng-controller="PaymentController as PC" class="container well">
   <div class="well">
-    <!-- <h1>Please Confirm You Information Is Correct</h1> -->
     <h3>Name: <b>{{PC.clientSubmittedInfo.firstName}} {{PC.clientSubmittedInfo.lastName}} </b></h3>
     <h3>Phone Number: <b>{{PC.clientSubmittedInfo.phone}}</b></h3>
     <h3>Street Address: <b>{{PC.clientSubmittedInfo.streetAdd}}</b></h3>
@@ -66,16 +58,9 @@
     <a href="#/checkout"><button class="btn btn-success">Back</button></a>
   </div>
 
-
+  <div class="well">
+    <h1>Proceed forward with purchase</h1>
+    <button id="customButton" class="btn btn-success" >Purchase</button>
+  </div>
   
-
-
-
-<div class="well">
-  <h1>Proceed forward with purchase</h1>
-  <button id="customButton" class="btn btn-success" >Purchase</button>
-</div>
-
-<!-- ng-click="PC.createCust(PC.clientSubmittedInfo)" -->
-</div>
-
+</div> <!-- Closes Payment Controller -->

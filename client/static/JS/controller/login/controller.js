@@ -1,3 +1,4 @@
+//Users Controller
 myApp.controller('UsersController', function(UserFactory ,$cookies, $location){
 	var self = this;
 	this.users;
@@ -8,12 +9,10 @@ myApp.controller('UsersController', function(UserFactory ,$cookies, $location){
 		// 	self.users = data;
 		// 	// console.log(self.users);
 		// 	self.newUser ={};
-			
 		// 	self.self();
-
 		// })
 	}
-
+			
 	this.create = function(input){
 		
 		UserFactory.create(input, function(user){
@@ -32,12 +31,7 @@ myApp.controller('UsersController', function(UserFactory ,$cookies, $location){
 		self.loggedin = {};
 	}
 
-	// this.self = function(){
-
-	// 	self.loggedin = UserFactory.user;
-	// }
-
-	
-
 	this.index();
-})
+	
+}) //Closes UsersController
+

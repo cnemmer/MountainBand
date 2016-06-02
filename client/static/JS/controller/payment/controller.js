@@ -1,3 +1,4 @@
+//Payment Controller
 myApp.controller('PaymentController', function(CheckoutFactory,PaymentFactory, ProductsFactory, $location, $rootScope){
 	var self = this;
 
@@ -9,12 +10,9 @@ myApp.controller('PaymentController', function(CheckoutFactory,PaymentFactory, P
 	}
 
 	this.redirectURL = function() {
-		console.log('before $location');
 		$rootScope.$apply(function() {
-			$location.path('/receipt');
-		console.log($location);	
+			$location.path('/receipt');	
 		})
-		
 	}
-
-})
+		
+}) //Closes Payment Controller

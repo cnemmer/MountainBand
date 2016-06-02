@@ -1,4 +1,4 @@
-
+//Client Side "Angular" Routes
 		myApp.config(function($routeProvider){
 			$routeProvider
 			.when('/', {
@@ -48,4 +48,4 @@
 			.otherwise({
 				redirectTo: '/'
 			})
-		})
+		}) //Closes Angular Routes

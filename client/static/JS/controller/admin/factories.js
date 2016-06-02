@@ -1,3 +1,4 @@
+//Admin Products Factory
 myApp.factory('AdminProductFactory', function($http){
 	var factory ={};
 
@@ -19,5 +20,7 @@ myApp.factory('AdminProductFactory', function($http){
 			callback2(id);
 		})
 	}
+	
 	return factory;
-})
+
+}) //Closes AdminProductsFactory 

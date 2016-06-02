@@ -1,3 +1,4 @@
+//Payment Factory
 myApp.factory('PaymentFactory', function($http){
 	var payments = {};
 
@@ -10,4 +11,5 @@ myApp.factory('PaymentFactory', function($http){
 	}
 
 	return payments;
-})
+
+}) //Closes Payment Factory

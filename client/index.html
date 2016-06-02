@@ -25,21 +25,28 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-cookies.js"></script>
-	<script src="/static/JS/factory/checkoutFactory.js"></script>
-	<script src="/static/JS/factory/loginfactory.js"></script>
-	<script src="/static/JS/factory/paymentfactory.js"></script>
-	<script src="/static/JS/factory/productsFactory.js"></script>
-  
 
-	<script src="/static/JS/controller/checkoutcontroller.js"></script>
-	<script src="/static/JS/controller/logincontroller.js"></script>
-	<script src="/static/JS/controller/productscontroller.js"></script>
-	<script src="/static/JS/controller/paymentcontroller.js"></script>
+	<!-- File Path For myApp Module -->
+	<script src="/static/JS/config/module.js"></script>
+	
+	<!-- File Path For Client Side Routes -->
 	<script src="/static/JS/config/angularRoutes.js"></script>
-
+	
+	<!-- File Path For Controllers and Factories -->
 	<script src="/static/JS/controller/admin/factories.js"></script>
-
 	<script src="/static/JS/controller/admin/controllers.js"></script>
+	<script src="/static/JS/controller/checkout/controller.js"></script>
+	<script src="/static/JS/controller/checkout/factory.js"></script>
+	<script src="/static/JS/controller/payment/controller.js"></script>
+	<script src="/static/JS/controller/payment/factory.js"></script>
+	<script src="/static/JS/controller/login/controller.js"></script>
+	<script src="/static/JS/controller/login/factory.js"></script>
+	<script src="/static/JS/controller/mainview/controller.js"></script>
+	<script src="/static/JS/controller/products/controller.js"></script>
+	<script src="/static/JS/controller/products/factory.js"></script>
+	<script src="/static/JS/controller/reciept/controller.js"></script>
+	<script src="/static/JS/controller/storelocation/controller.js"></script>
+
 </head>
 <body>
 <nav class="navbar-default navbar-fixed-top">
@@ -63,3 +70,6 @@
 	<div ng-view=""></div>
 </body>
 </html>
+  
+
+	

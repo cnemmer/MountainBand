@@ -1,14 +1,6 @@
 <div ng-controller="ProductsController as ProdCtrl">
-
-
-<<<<<<< HEAD
-=======
-
-
- <!-- Closes Nav Bar Section -->
- <div class="container well">
-
->>>>>>> eb878bf77af6df62184db5efa0fb7c4e04bdf9cb
+ 
+  <div class="container well">
     <div class="productMain">
       <div class="productSearch">
         Name: <input type="text" ng-model="prod.name" placeholder="Name">
@@ -17,17 +9,14 @@
       </div> <!-- Closes Search Bar Section -->
 
       <div class="productImgs" ng-repeat="prod in ProdCtrl.products | filter: {name: prod.name, price: prod.price, metal: prod.metal } ">
-                
-                <img ng-src="{{ prod.img }}" alt="{{ prod.description }}">
-          
+        <img ng-src="{{ prod.img }}" alt="{{ prod.description }}">
         <button ng-click="ProdCtrl.sendProdToCheckout(prod._id)">Add to cart</a></button>
         <p>{{ prod.price | currency}}</p>
         <p>{{ prod.name }}</p>
-
+      </div>  
+ 
     </div> <!-- Closes Div For Products -->
+                
+  </div> <!-- Closes Container Div -->
 
- </div> <!-- Closes Container Div -->
-
-</div> <!-- Closes ProductsController -->
-
-    
+</div> <!-- Closes ProductsController -->    

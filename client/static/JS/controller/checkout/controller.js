@@ -1,10 +1,9 @@
+//Checkout Controller
 myApp.controller('CheckoutController',  function(CheckoutFactory, ProductsFactory, $location, $routeParams){
 	var self = this;
 	
 	this.newCustomer = CheckoutFactory.clientSubmittedInfo;
 	this.productForCheckout = ProductsFactory.productInfoById;
-
-	/*console.log(this.productForCheckout);*/
 
 	this.index = function(){
 			self.newCustomer = {};
@@ -20,7 +19,3 @@ myApp.controller('CheckoutController',  function(CheckoutFactory, ProductsFactor
 	this.index();
 
 }) //Closes CheckoutController
-	
-
-
-	

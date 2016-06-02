@@ -1,9 +1,7 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngCookies']);
-
+//Checkout Factory
 myApp.factory('CheckoutFactory', function($http){
 	var checkouts = {};
 	checkouts.clientSubmittedInfo;
-
 
 	checkouts.index = function(callback){
 		$http.get('/checkout').success(callback);
@@ -15,4 +13,5 @@ myApp.factory('CheckoutFactory', function($http){
 	}
 
 	return checkouts;
-})
+	
+}) //Closes CheckoutFactory

@@ -1,3 +1,4 @@
+//Admin Products Controller
 myApp.controller('AdminProductController', function(AdminProductFactory, $routeParams){
 	var self = this;
 
@@ -8,8 +9,6 @@ myApp.controller('AdminProductController', function(AdminProductFactory, $routeP
 		AdminProductFactory.index(function(data){
 			self.products = data;
 			self.newProduct = {}
-
-			// console.log(data)
 		})
 	}
 
@@ -21,19 +20,16 @@ myApp.controller('AdminProductController', function(AdminProductFactory, $routeP
 	this.show = function(id){
 		AdminProductFactory.show(id, function(data){
 			self.edit = data;
-			// console.log(self.edit);
 		})
 	}
 
 	this.update = function(id, input){
 		console.log(id, input);
 		AdminProductFactory.update(id, input, self.index, self.show);
-
-		// self.update ={};
 	}
 
 	this.show($routeParams.id);
 
 	this.index();
 
-})
+}) //Closes AdminProductsController
