@@ -18,6 +18,6 @@ require('./server/config/mongoose');
 require('./server/config/routes')(app);
 
 //Port Location
-app.listen(3200, function(){
-	console.log('Server listening on port: 3200')
+app.listen(3500, function(){
+	console.log('Server listening on port: 3500')
 })

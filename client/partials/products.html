@@ -1,22 +1,172 @@
+<style>
+  #mainBody{
+    background-color: white !important;
+
+  }
+  .productMain{
+    background-color: white !important;
+    border: none;
+    height: 1000px;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .productContainer{
+    width: 70%;
+    display: inline-block;
+  }
+  .productSearch{
+    vertical-align: top;
+    display: inline-block;
+    width: 15%;
+    height: 60%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .productSearch form select{
+    display: block;
+  }
+  .searchContainerDiv{
+    text-align: left;
+    margin-left: 10%;
+  }
+  .searchContainerDiv li{
+    list-style-type: none;
+  }
+  .productImages{
+    width: 400px;
+    display: inline-block;
+    margin: 20px 10px 20px 10px;
+    padding: 10px;
+    /*background-color: gray;*/
+  }
+  .productImages img{
+    width: 300px;
+    height: 300px;
+  }
+  .footer{
+    height: 35%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer div{
+    height: 30%;
+    width:20%;
+    /*display: inline-block;*/
+  }
+  .footer div li{
+    list-style-type: none;
+  }
+  .footer div p{
+    font-weight: bolder;
+    color: black;
+  }
+  .lower-footer{
+    height: 20%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .lower-footer h1{
+    font-size: 8rem;
+    font-family: 'Arizonia', cursive; 
+  }
+  .productImages p{
+    font-size: 3rem;
+    font-family: 'Arizonia', cursive;
+  }
+  .ng-binding{
+    margin: 0 auto; 
+  }
+</style>
+
 <div ng-controller="ProductsController as ProdCtrl">
  
-  <div class="container well">
+  <!-- <div class="container well">-->
     <div class="productMain">
+
       <div class="productSearch">
-        Name: <input type="text" ng-model="prod.name" placeholder="Name">
-        Price: <input type="text" ng-model="prod.price" placeholder="Price">
-        Metal: <input type="text" ng-model="prod.metal" placeholder="Metal">
+        <form>
+          <div class="searchContainerDiv">
+          <h3>Search By</h3>
+          <label>Metal</label>
+          <ul>
+            <li>White Gold</li>
+            <li>Yellow Gold</li>
+            <li>Silver</li>
+            <li>Platinum</li>
+            <li>Modern</li>
+          </ul>
+          <label>Range</label>
+          <ul>
+            <li>0.00-500.00</li>
+            <li>501.00-1000.00</li>
+            <li>1001.00-1500.00</li>
+            <li>1501.00-2000.00</li>
+            <li>2001.00-9999.00</li>
+          </ul>
+           <label>Type</label>
+          <ul>
+            <li>Ring</li>
+            <li>Pendant</li>
+            <li>Bracelet</li>
+          </ul>
+        </div>
+        </form>
       </div> <!-- Closes Search Bar Section -->
 
-      <div class="productImgs" ng-repeat="prod in ProdCtrl.products | filter: {name: prod.name, price: prod.price, metal: prod.metal } ">
-        <img ng-src="{{ prod.img }}" alt="{{ prod.description }}">
-        <button ng-click="ProdCtrl.sendProdToCheckout(prod._id)">Add to cart</a></button>
-        <p>{{ prod.price | currency}}</p>
-        <p>{{ prod.name }}</p>
-      </div>  
- 
+      <div class="productContainer">
+        <div class="productImages text-center" ng-repeat="prod in ProdCtrl.products | filter: {name: prod.name,           price: prod.price, metal: prod.metal }" ng-click="ProdCtrl.sendProdToCheckout(prod._id)">
+          <p>{{ prod.name }}</p>
+          <img ng-src="{{ prod.img }}" alt="{{ prod.description }}">
+          <p>{{ prod.price | currency}}</p>
+        </div>
+      </div>   
     </div> <!-- Closes Div For Products -->
-                
-  </div> <!-- Closes Container Div -->
+    
+  <!-- </div> --> <!-- Closes Container Div -->
+ <div class="footer">
+  <div>
+    <p>Navigate</p>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Find Us</li>
+    </ul>
+  </div>
+  
+  <div>
+    <p>Follow Us</p>
+    <ul>
+      <li>Instagram</li>
+      <li>Facebook</li>
+      <li>Twitter</li>
+      <li>Pinterest</li>
+      <li>Etsy</li>
+    </ul>
+  </div>
 
+  <div>
+    <p>Visit</p>
+    <ul>
+      <li>Hours:</li>
+      <li>10am-5pm</li>
+      <li>Thursday-Saturday</li>
+      <li>2616 W Colorado Ave</li>
+      <li>Suite 18</li>
+      <li>Colorado Springs,Co</li>
+    </ul>
+  </div>
+ </div>
+
+
+ <div class="lower-footer">
+  <h1>Handmade In The Rockies</h1>
+ </div>  
+  
 </div> <!-- Closes ProductsController -->    
+
